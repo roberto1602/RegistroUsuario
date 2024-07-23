@@ -1,0 +1,281 @@
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <div class="card">
+          <div class="card-body">
+            <h1 class="titulo">Registro Usuario</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="titulo">{{accion | uppercase}} Usuario</h5>
+    
+              <form [formGroup]="form" (ngSubmit)="guardarUsuario()">
+                <!-- usuario_id -->
+                <div class="input-group input-group-lg mb-3">
+                  <span class="input-group-text">
+                    <i class="fas fa-user"
+                      [class.green-icon]="this.form.get(' usuario_id')?.valid"
+                      [class.red-icon]="
+                        this.form.get(' usuario_id')?.invalid &&
+                        this.form.get(' usuario_id')?.touched">
+                    </i>
+                  </span>
+                  <input
+                    formControlName=" usuario_id"
+                    type="text"
+                    class="form-control"
+                    placeholder=" Id usuario"
+                  />
+                </div>
+
+
+                  <!-- numero Identificacion   -->
+                <div class="input-group input-group-lg mb-3">
+                  <span class="input-group-text">
+                    <i
+                      class="fas fa-credit-card"
+                      [class.green-icon]=" this.form.get(' numero_identificacion')?.valid"
+                      [class.red-icon]="
+                        this.form.get(' numero_identificacion')?.invalid &&
+                        this.form.get(' numero_identificacion')?.touched
+                      "
+                    ></i>
+                  </span>
+                  <input
+                    formControlName=" numero_identificacion"
+                    maxlength="16"
+                    type="text"
+                    class="form-control"
+                    placeholder="Numero identificación"
+                  /> 
+                </div>
+    
+                <!-- nombre -->
+                <div class="input-group input-group-lg mb-3">
+                    <span class="input-group-text">
+                      <i class="fas fa-user"
+                        [class.green-icon]="this.form.get(' nombre')?.valid"
+                        [class.red-icon]="
+                          this.form.get(' nombre')?.invalid &&
+                          this.form.get(' nombre')?.touched">
+                      </i>
+                    </span>
+                    <input
+                      formControlName=" nombre"
+                      type="text"
+                      class="form-control"
+                      placeholder=" nombre"
+                    />
+                  </div>
+
+                 <!-- apellido -->
+                <div class="input-group input-group-lg mb-3">
+                    <span class="input-group-text">
+                      <i class="fas fa-user"
+                        [class.green-icon]="this.form.get('apellido')?.valid"
+                        [class.red-icon]="
+                          this.form.get(' apellido')?.invalid &&
+                          this.form.get(' apellido')?.touched">
+                      </i>
+                    </span>
+                    <input
+                      formControlName=" apellido"
+                      type="text"
+                      class="form-control"
+                      placeholder=" apellido"
+                    />
+                  </div>   
+
+                  <!-- nombre_usuario -->
+                <div class="input-group input-group-lg mb-3">
+                    <span class="input-group-text">
+                      <i class="fas fa-user"
+                        [class.green-icon]="this.form.get('nombre_usuario')?.valid"
+                        [class.red-icon]="
+                          this.form.get(' nombre_usuario')?.invalid &&
+                          this.form.get(' nombre_usuario')?.touched">
+                      </i>
+                    </span>
+                    <input
+                      formControlName=" nombre_usuario"
+                      type="text"
+                      class="form-control"
+                      placeholder=" nombre usuario"
+                    />
+                  </div>   
+
+                  
+                  <!-- correo -->
+                <div class="input-group input-group-lg mb-3">
+                    <span class="input-group-text">
+                      <i class="fas fa-user"
+                        [class.green-icon]="this.form.get('correo')?.valid"
+                        [class.red-icon]="
+                          this.form.get(' correo')?.invalid &&
+                          this.form.get(' correo')?.touched">
+                      </i>
+                    </span>
+                    <input
+                      formControlName=" correo"
+                      type="text"
+                      class="form-control"
+                      placeholder=" correo"
+                    />
+                  </div> 
+
+                  <!-- telefono -->
+                <div class="input-group input-group-lg mb-3">
+                    <span class="input-group-text">
+                      <i class="fas fa-user"
+                        [class.green-icon]="this.form.get('telefono')?.valid"
+                        [class.red-icon]="
+                          this.form.get(' telefono')?.invalid &&
+                          this.form.get(' telefono')?.touched">
+                      </i>
+                    </span>
+                    <input
+                      formControlName=" telefono"
+                      type="text"
+                      class="form-control"
+                      placeholder=" telefono"
+                    />
+                  </div> 
+
+
+                  <!-- direccion -->
+                <div class="input-group input-group-lg mb-3">
+                    <span class="input-group-text">
+                      <i class="fas fa-user"
+                        [class.green-icon]="this.form.get('direccion')?.valid"
+                        [class.red-icon]="
+                          this.form.get(' direccion')?.invalid &&
+                          this.form.get(' direccion')?.touched">
+                      </i>
+                    </span>
+                    <input
+                      formControlName=" direccion"
+                      type="text"
+                      class="form-control"
+                      placeholder=" direccion"
+                    />
+                  </div>
+
+
+                 <!-- genero -->
+                <div class="input-group input-group-lg mb-3">
+                    <span class="input-group-text">
+                      <i class="fas fa-user"
+                        [class.green-icon]="this.form.get('genero')?.valid"
+                        [class.red-icon]="
+                          this.form.get(' genero')?.invalid &&
+                          this.form.get(' genero')?.touched">
+                      </i>
+                    </span>
+                    <input
+                      formControlName=" genero"
+                      type="text"
+                      class="form-control"
+                      placeholder=" genero"
+                    />
+                  </div>
+                  
+                   <!-- estado -->
+                <div class="input-group input-group-lg mb-3">
+                    <span class="input-group-text">
+                      <i class="fas fa-user"
+                        [class.green-icon]="this.form.get('estado')?.valid"
+                        [class.red-icon]="
+                          this.form.get(' estado')?.invalid &&
+                          this.form.get(' estado')?.touched">
+                      </i>
+                    </span>
+                    <input
+                      formControlName=" estado"
+                      type="text"
+                      class="form-control"
+                      placeholder=" estado"
+                    />
+                  </div>
+                  
+
+                    <!-- contrasena -->
+                <div class="input-group input-group-lg mb-3">
+                    <span class="input-group-text">
+                      <i class="fas fa-key"
+                        [class.green-icon]="this.form.get('contrasena')?.valid"
+                        [class.red-icon]="
+                          this.form.get(' contrasena')?.invalid &&
+                          this.form.get(' contrasena')?.touched">
+                      </i>
+                    </span>
+                    <input
+                      formControlName=" contrasena"
+                      type="password"
+                      class="form-control"
+                      placeholder=" contrasena"
+                    />
+                  </div>
+
+
+                        <!-- activo -->
+                <div class="input-group input-group-lg mb-3">
+                    <span class="input-group-text">
+                      <i class="fas fa-user"
+                        [class.green-icon]="this.form.get('activo')?.valid"
+                        [class.red-icon]="
+                          this.form.get(' activo')?.invalid &&
+                          this.form.get(' activo')?.touched">
+                      </i>
+                    </span>
+                    <input
+                      formControlName=" activo"
+                      type="text"
+                      class="form-control"
+                      placeholder=" activo"
+                    />
+                  </div>
+
+                <div class="d-grid gap-2">
+                  <button [disabled]="this.form.invalid" type="submit" class="btn btn-success btn-lg">
+                    <i class="fas fa-database"></i> &nbsp; Aceptar
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="titulo">Listado Alumnos</h5>
+              <table class="table">
+                <tbody>
+                  <tr *ngFor="let usuario of listUser">
+                    <td>{{ usuario.usuario_id }}</td>
+                    <td>{{ usuario.numero_identificacion }}</td>
+                    <td>{{ usuario.nombre }}</td>
+                    <td>{{ usuario.apellido }}</td>
+                    <td>{{ usuario.nombre_usuario }}</td>
+                    <td>{{ usuario.correo }}</td>
+                    <td>{{ usuario.telefono }}</td>
+                    <td>{{ usuario.direccion }}</td>
+                    <td>{{ usuario.genero }}</td>
+                    <td>{{ usuario.estado }}</td>
+                    <td>{{ usuario.contrasena }}</td>
+                    <td>{{ usuario.activo }}</td>
+                    <td><i (click)="actualizarUsuario(usuario)" class="far fa-edit text-info"></i></td>
+                    <td><i (click)="eliminarUsuario(usuario.idUser)" class="fas fa-trash text-danger"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
